@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="accent">Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div [formGroup]="formLogin">
+    <ion-item>
+      <ion-label position="fixed">E-mail:</ion-label>
+      <ion-input formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Constraseña:</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+    <ion-button color="primary" expand="block" [disabled]="formLogin.invalid || loading" (click)="login()">Ingresar</ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container" *ngIf="user">
+    <ion-avatar class="user-image">
+      <img [src]="user.avatar">
+    </ion-avatar>
+    <p>{{user.first_name + user.last_name}}</p>
+    <p>{{user.email}}</p>
+  </div>
+</ion-content>
